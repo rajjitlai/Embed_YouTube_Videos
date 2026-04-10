@@ -1,35 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add YouTube Video (manually and automatically)</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamLine | Premium YouTube Embed</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <!-- MANUALLY -->
-    <h1>Our Video</h1>
-    <div class="vidClass">
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <header>
+        <nav class="glass-nav">
+            <div class="logo">Stream<span>Line</span></div>
+            <div class="tagline">Python Programming Series</div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- FEATURED VIDEO -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Featured <span>Masterclass</span></h1>
+                    <p>Deep dive into advanced Python concepts with our curated featured video.</p>
+                </div>
+                <div class="featured-card glass">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/ReIIfIh20Po?si=NPNMNsH6dkB8g7Wr" 
+                                title="YouTube video player" frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="separator">
+
+        <!-- DYNAMIC VIDEOS -->
+        <section class="video-library">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Latest <span>Tutorials</span></h2>
+                    <p>Explore our most recent uploads from the Python playlist.</p>
+                </div>
+                <div class="video-grid" id="vidContainer">
+                    <!-- Skeletal loaders will be here via JS during fetch -->
+                    <div class="skeleton-card glass"></div>
+                    <div class="skeleton-card glass"></div>
+                    <div class="skeleton-card glass"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
         <div class="container">
-            <h1>This will be our Title and Thumbnail</h1>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ReIIfIh20Po?si=NPNMNsH6dkB8g7Wr"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
+            <p>&copy; 2026 Rajjit Laishram. All rights reserved.</p>
         </div>
-    </div>
-
-    <hr>
-
-    <!-- AUTOMATIC -->
-    <h1>Our Videos</h1>
-    <div class="vidClassNew" id="vidContainer">
-        <!-- Videos will be added here automatically -->
-    </div>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>
-
 </html>
